@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Harmony | Interactive Math Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="universe"></div>
+    
+    <div id="quick-controls">
+        <button id="random-colors">Random Colors</button>
+        <button id="screenshot">Take Screenshot</button>
+    </div>
+    
+    <div id="interface">
+        <button id="toggle-interface">▲ Controls ▼</button>
+        <h1>COSMIC HARMONY</h1>
+        
+        <div class="control-group">
+            <button id="harmonic">Harmonic</button>
+            <button id="fibonacci">Fibonacci</button>
+            <button id="prime">Primes</button>
+            <button id="lissajous">Lissajous</button>
+            <button id="random-pattern">Random Pattern</button>
+        </div>
+        
+        <div class="control-group">
+            <div class="slider-container" style="flex: 3;">
+                <label for="particles">Particles: <span id="particle-count">500</span></label>
+                <input type="range" id="particles" min="100" max="2000" value="500">
+            </div>
+            <div class="slider-container" style="flex: 2;">
+                <label for="speed">Speed: <span id="speed-value">1.0</span>x</label>
+                <input type="range" id="speed" min="0.1" max="3" step="0.1" value="1.0">
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <div class="slider-container">
+                <label for="connection-dist">Connections: <span id="connection-value">120</span>px</label>
+                <input type="range" id="connection-dist" min="50" max="300" value="120">
+            </div>
+        </div>
+        
+        <div id="math-display">
+            <div id="current-pattern">Current pattern: <span class="formula">Harmonic Series 1/n</span></div>
+            <div id="equation">f(n) = 1/n</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>i
