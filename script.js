@@ -235,4 +235,29 @@ function windowResized() {
 
 // Event Listeners
 function setupEventListeners() {
-    document.getElementById('harmonic').addEventListener('click', () => setPattern('harmonic
+    document.getElementById('harmonic').addEventListener('click', () => setPattern('harmonic'));
+    document.getElementById('fibonacci').addEventListener('click', () => setPattern('fibonacci'));
+    document.getElementById('prime').addEventListener('click', () => setPattern('prime'));
+    document.getElementById('lissajous').addEventListener('click', () => setPattern('lissajous'));
+    document.getElementById('random-pattern').addEventListener('click', randomizePattern);
+    document.getElementById('random-colors').addEventListener('click', randomizeColors);
+    document.getElementById('screenshot').addEventListener('click', takeScreenshot);
+    
+    document.getElementById('particles').addEventListener('input', (e) => {
+        particleCount = parseInt(e.target.value);
+        document.getElementById('particle-count').textContent = particleCount;
+        createParticles();
+    });
+    
+    document.getElementById('speed').addEventListener('input', (e) => {
+        animationSpeed = parseFloat(e.target.value);
+        document.getElementById('speed-value').textContent = animationSpeed.toFixed(1);
+    });
+    
+    document.getElementById('connection-dist').addEventListener('input', (e) => {
+        connectionThreshold = parseInt(e.target.value);
+        document.getElementById('connection-value').textContent = connectionThreshold;
+    });
+    
+    document.getElementById('toggle-interface').addEventListener('click', toggleInterface);
+}
